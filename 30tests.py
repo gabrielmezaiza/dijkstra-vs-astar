@@ -21,11 +21,11 @@ def ejecutar_muestreo_masivo(replicaciones=30):
     
     print(f"Iniciando experimento estadístico con {replicaciones} ejecuciones por escala...")
     
-    for tamano in [100, 250, 500]:
+    for tamano in [100, 250, 500, 1000]:
         print(f"-> Procesando entorno con {tamano} nodos...")
         
         for i in range(1, replicaciones + 1):
-            # Generamos un grafo nuevo y único en cada una de las 30 corridas
+            # Generamos un grafo nuevo y unico en cada una de las 30 corridas
             grafo, posiciones = generar_grafo_con_coordenadas(tamano)
             inicio_nodo = 0
             fin_nodo = tamano - 1
